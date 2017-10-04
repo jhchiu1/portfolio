@@ -6,15 +6,33 @@ p {
 font-weight: bold;
 }
 
-h1{
+h2 {
 color: #00ffcc;
 text-align: center;
 font-family: Verdana;
-margin: 1cm;
 letter-spacing: 2px;
 font-weight: bold; 
-  background: -webkit-linear-gradient(left, #f006d4, #19f3f3);
+  background: -webkit-linear-gradient(left, #f006d4, #f4d27a, #19f3f3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+h1 {
+margin: 0px;
+padding-top: 15px;
 }
+
+#logo {
+text-align: left;
+color: #f006d4;
+text-shadow: 2px 2px 4px #19f3f3;
+padding: 15px;
+padding-bottom: 50px;
+text-align: left;
+}
+
+.navi {
+margin: 25px;
+margin-bottom: 10em;
+}
+
