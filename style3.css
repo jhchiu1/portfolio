@@ -1,0 +1,20 @@
+body {
+background-color: #34373a;
+}
+
+p {
+font-weight: bold;
+}
+
+h1{
+color: #00ffcc;
+text-align: center;
+font-family: Verdana;
+margin: 1cm;
+letter-spacing: 2px;
+font-weight: bold; 
+  background: -webkit-linear-gradient(left, #f006d4, #19f3f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+}
