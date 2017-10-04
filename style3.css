@@ -1,5 +1,8 @@
 body {
 background-color: #34373a;
+background-image: url("navibg.png");
+background-repeat: repeat-y;
+background-position: left top;
 }
 
 p {
@@ -8,13 +11,15 @@ font-weight: bold;
 
 h2 {
 color: #00ffcc;
+font-size: 48px;
 text-align: center;
-font-family: Verdana;
+font-family: Tahoma;
 letter-spacing: 2px;
 font-weight: bold; 
   background: -webkit-linear-gradient(left, #f006d4, #f4d27a, #19f3f3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+margin-bottom: 50px;
 }
 
 h1 {
@@ -29,10 +34,95 @@ text-shadow: 2px 2px 4px #19f3f3;
 padding: 15px;
 padding-bottom: 50px;
 text-align: left;
+margin-bottom: 70px;
 }
 
+.button {
+font-family: Tahoma;
+  background-color: #19f3f3;
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #19f3f3;
+  background-color: #34373a;
+  border:  2px solid #19f3f3;
+  border-radius: 3px;
+  box-shadow: 0 1px black;
+margin-left: 280px;
+}
+
+.button:hover {
+background-color: #19f3f3;
+color: #34373a;
+  -webkit-animation: bounce .3s infinite alternate;
+  -moz-animation: bounce .3s infinite alternate;
+  animation: bounce .3s infinite alternate;
+ animation-iteration-count:2;
+}
+@-webkit-keyframes bounce {
+  to { -webkit-transform: scale(1.2); }
+}
+@-moz-keyframes bounce {
+  to { -moz-transform: scale(1.2); }
+}
+@keyframes bounce {
+  to { transform: scale(1.2); }
+}
+}
+
+.button:active {
+  background-color: #19f3f3;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 .navi {
-margin: 25px;
-margin-bottom: 10em;
+margin: 15px;
+margin-left: 25px;
+}
+
+#map {
+height: 400px;
+width: 500px;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+.container:hover .overlay {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #34373a;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 

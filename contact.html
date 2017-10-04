@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Julie Chiu</title>
+
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVHRfP2CNHxDRWT7tWMgYBXm7ns-hQLB8&callback=initMap">
+    </script>
+    <!-- The viewport is the visible area of a page. Pages may be wider
+ than the screen or browser window; and pages are often longer than
+ the browser window. This tag sets the width of the page equal to the
+ width of the browser window. The height stays the same. -->
+    <meta name="viewport" content="width=device-width initial-scale=1">
+
+    <!-- Include Bootstrap. This downloads Bootstrap from a CDN. You can
+     also host Bootstrap on your own server, but it's usually faster for the
+     user for their browser to fetch it from a CDN. -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        #gradient
+        {
+            height: 950px;
+            background: #000000; /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(left, #000000, #474747); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, #000000, #474747); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, #000000, #474747); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, #000000, #474747); /* Standard syntax (must be last) */
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="style3.css">
+</head>
+<div id="gradient">
+
+    <div class="container">
+        <img src="glyphicon glyphicon-home">
+        <div class="overlay">
+            <div class="text">Hello World</div>
+        </div>
+    </div>
+
+    <body>
+
+    <h1> <span id='logo'>JC</span></h1><p><p><p><p><p>
+
+        <div class="container1">
+            <a href="index1.html">
+                <span class="navi glyphicon glyphicon-home"></span></a>
+    <p><p>
+        <a href="about.html">
+            <span class="navi glyphicon glyphicon-user"></span></a>
+    <p><p>
+        <a href="work.html">
+            <span class="navi glyphicon glyphicon-picture"></span></a>
+    <p><p>
+        <a href="contact.html">
+            <span class="navi glyphicon glyphicon-envelope"></span></a>
+    <p><p>
+
+        </span>
+</div>
+
+<h2>CONTACT</h2>
+
+<a href="mailto:jhchiu1@gmail.com">Send me an email!</a>
+
+<script>
+    function initMap() {
+        //The mapDiv is the HTML element that will hold the map
+        var mapDiv = document.getElementById("map");
+        //Set three required options to display the map
+        //Other options such as preventing scrolling or zooming, are available
+        var mapOptions = {
+            center : new google.maps.LatLng(45, -93.26),   // Lat and long to center the map
+            zoom : 3,                                   // 0 = the whole world, 22 = max zoom in
+            mapTypeId : google.maps.MapTypeId.SATELLITE,  //or SATELLITE, HYBRID or TERRAIN
+            disableDefaultUI: true                      // Display unlabeled Satellite map, remove Map Controls
+        };
+        //And create the map, with the options specified
+        var map = new google.maps.Map(mapDiv, mapOptions);
+
+        //Can add features, points of interest, routes, lines etc. to maps
+        //Adding a marker to the map
+        //Like the map, set the options for the marker
+        var wlooMarkerOptions = {
+            position : new google.maps.LatLng(42.46, -92.35), //Where is the marker?
+            map : map,                       //What map?
+            draggable : false               //No moving the marker!
+
+        };
+
+        var cupMarkerOptions = {
+            position : new google.maps.LatLng(37.32, -122.01), //Where is the marker?
+            map : map,                       //What map?
+            draggable : false               //No moving the marker!
+
+        };
+
+        var nycMarkerOptions = {
+            position : new google.maps.LatLng(40.72, -74.00), //Where is the marker?
+            map : map,                       //What map?
+            draggable : false                //No moving the marker!
+
+        };
+        // Create the marker, with the options above
+        // A new marker with the map option set in the markerOptions,
+        // is automatically added to the map it belongs to.
+        var wlooMarker = new google.maps.Marker(wlooMarkerOptions);
+        var cupMarker = new google.maps.Marker(cupMarkerOptions);
+        var nycMarker = new google.maps.Marker(nycMarkerOptions);
+
+
+
+        // Create the marker, with the options above
+        // A new marker with the map option set in the markerOptions,
+        // is automatically added to the map it belongs to.
+
+        // Create an info window
+        var infowindow = new google.maps.InfoWindow ( {
+            content : "Waterloo, Iowa, is right here"
+        });
+
+
+        // And add it to our Waterloo marker
+        mplsMarker.addListener("click", function() {
+            infowindow.open(map, wlooMarker);
+        });
+
+        var infowindow = new google.maps.InfoWindow ( {
+            content : "Cupertino, California, is right here"
+        });
+        // And add it to our Cupertino marker
+        mplsMarker.addListener("click", function() {
+            infowindow.open(map, cupMarker);
+        });
+
+        var infowindow = new google.maps.InfoWindow ( {
+            content : "New York City, New York, is right here"
+        });
+        // And add it to our NYC marker
+        mplsMarker.addListener("click", function() {
+            infowindow.open(map, nycMarker);
+        });
+
+
+
+    }
+</script>
+
+<body>
+
+<h1>Click on the marker for Waterloo, Iowa... </h1>
+<!--This div will contain a map. Note that the size of this div is set with CSS.-->
+<div id="map"></div>
+
+
+
+</body>
+</html>
