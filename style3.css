@@ -1,3 +1,39 @@
+  #gradient
+        {
+            height: 950px;
+            background: #000000; /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(left, #000000, #474747); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, #000000, #474747); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, #000000, #474747); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, #000000, #474747); /* Standard syntax (must be last) */
+        }
+
+  .column {
+    float: left;
+    width: 40%;
+
+
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  .left {
+    margin-right: 300px;
+
+    width: 45%;
+  }
+
+  .right {
+    width: 25%;
+    padding-right: 185px;
+
+  }
 body {
 background-color: #34373a;
 background-image: url("navibg.png");
@@ -9,6 +45,18 @@ p {
 font-weight: bold;
 }
 
+  h3 {
+    color: #00ffcc;
+    font-size: 18px;
+    text-align: center;
+    font-family: Tahoma;
+    letter-spacing: 2px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(left, #f006d4, #f4d27a, #19f3f3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
 h2 {
 color: #00ffcc;
 font-size: 48px;
@@ -19,13 +67,16 @@ font-weight: bold;
   background: -webkit-linear-gradient(left, #f006d4, #f4d27a, #19f3f3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-margin-bottom: 50px;
 }
 
 h1 {
 margin: 0px;
 padding-top: 15px;
+  font-size: 48px;
+  text-align: left;
 }
+
+
 
 #logo {
 text-align: left;
@@ -82,12 +133,38 @@ color: #34373a;
 .navi {
 margin: 15px;
 margin-left: 25px;
+  padding: 5px;
 }
 
 #map {
+  margin-left: 490px;
 height: 400px;
 width: 500px;
 }
+
+  * {box-sizing: border-box}
+
+  .container {
+    width: 100%;
+    background-color: black;
+    border-radius: 3px;
+  }
+
+  .skills {
+    text-align: right;
+    padding-right: 10px;
+    line-height: 20px;
+    border-radius: 3px;
+    color: white;
+  }
+
+  .html {width: 90%; background-color: #f006d4;}
+  .css {width: 80%; background-color: #f4d27a;}
+  .js {width: 65%; background-color:  #19f3f3;}
+  .sql {width: 60%; background-color: #f006d4;}
+  .python {width: 60%; background-color: #f4d27a;}
+  .csharp {width: 50%; background-color:  #19f3f3;}
+
 
 .container {
   position: relative;
@@ -110,11 +187,12 @@ width: 500px;
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background-color: black;
 }
 
-.container:hover .overlay {
+.container :hover .overlay {
   opacity: 1;
+
 .text {
   color: white;
   font-size: 20px;
