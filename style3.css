@@ -7,33 +7,6 @@
             background: -moz-linear-gradient(right, #000000, #474747); /* For Firefox 3.6 to 15 */
             background: linear-gradient(to right, #000000, #474747); /* Standard syntax (must be last) */
         }
-
-  .column {
-    float: left;
-    width: 40%;
-
-
-  }
-
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-
-  .left {
-    margin-right: 300px;
-
-    width: 45%;
-  }
-
-  .right {
-    width: 25%;
-    padding-right: 185px;
-
-  }
 body {
 background-color: #34373a;
 background-image: url("navibg.png");
@@ -88,6 +61,11 @@ text-align: left;
 margin-bottom: 70px;
 }
 
+img {
+    float: right;
+    margin-right: 200px;
+}
+
 .button {
 font-family: Tahoma;
   background-color: #19f3f3;
@@ -103,7 +81,7 @@ font-family: Tahoma;
   border:  2px solid #19f3f3;
   border-radius: 3px;
   box-shadow: 0 1px black;
-margin-left: 280px;
+margin-left: 580px;
 }
 
 .button:hover {
@@ -166,7 +144,7 @@ width: 500px;
   .csharp {width: 50%; background-color:  #19f3f3;}
 
 
-.container {
+.container1 {
   position: relative;
   width: 50%;
 }
@@ -191,7 +169,8 @@ width: 500px;
 }
 
 .container :hover .overlay {
-  opacity: 1;
+    opacity: 1;
+}
 
 .text {
   color: white;
