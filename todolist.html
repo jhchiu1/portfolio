@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 6, Advanced Part 3</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        .do{
+            background-color: #19f3f3;
+            font-family: Tahoma;
+        }
+        .done{
+            background-color: #f006d4;
+            text-decoration: line-through;
+            font-family: Tahoma;
+        }
+        #gradient {
+            height: 750px;
+            background: #000000; /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(left, #000000, #474747); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, #000000, #474747); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, #000000, #474747); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, #000000, #474747); /* Standard syntax (must be last) */
+        }
+        td {
+            color: white;
+            font-family: tahoma;
+            font-weight: bold;
+
+        }
+
+        th {
+            color: white;
+            font-family: tahoma;
+            font-weight: bold;
+        }
+
+
+        table {
+            margin-left: 40px;
+            border: 3px solid white;
+        }
+
+        p {
+            margin-left: 100px;
+            font-size: 38px;
+        }
+        h2 {
+            color: #00ffcc;
+            font-size: 48px;
+            text-align: center;
+            font-family: Tahoma;
+            letter-spacing: 2px;
+            font-weight: bold;
+            background: -webkit-linear-gradient(left, #f006d4, #f4d27a, #19f3f3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .button {
+            font-family: Tahoma;
+            background-color: #19f3f3;
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 20px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #19f3f3;
+            background-color: #34373a;
+            border:  2px solid #19f3f3;
+            border-radius: 3px;
+            box-shadow: 0 1px black;
+            margin-left: 40px;
+        }
+
+        .button:hover {
+            background-color: #19f3f3;
+            color: #34373a;
+            -webkit-animation: bounce .3s infinite alternate;
+            -moz-animation: bounce .3s infinite alternate;
+            animation: bounce .3s infinite alternate;
+            animation-iteration-count:2;
+        }
+        @-webkit-keyframes bounce {
+            to { -webkit-transform: scale(1.2); }
+        }
+        @-moz-keyframes bounce {
+            to { -moz-transform: scale(1.2); }
+        }
+        @keyframes bounce {
+            to { transform: scale(1.2); }
+        }
+
+        .button:active {
+            background-color: #19f3f3;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .field {
+            border-radius: 3px;
+            margin-left: 40px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div id="gradient">
+
+    <h2><b>TODO LIST</b></h2>
+<ul id="my_list">
+</ul>
+
+<div class='form'>
+    <form>
+<div class="field"><input id="input2" type="text" name="box"></div><P><P>
+<div class='actions'>
+
+
+    <input type="button" class="button" id="addtolist" value="Add items to this list" disabled="disabled"><P><P>
+</div></form>
+
+<button type="button" class="button" id="getrid">Remove Finished Tasks</button>
+<P><P>
+<script>
+    $(function() {
+
+        $("#addtolist").click(function () {                             // Click function appending user input to list with class = do
+            y = $("#input2").val();
+            $("#my_list").append("<li class='do'>"+y+"</li>");
+        });
+
+        $(document).ready(function() {                                   // Assistance from reference: http://jsfiddle.net/JamesHill/2Cm9p/
+            $('.field input').keyup(function() {
+
+                var empty = false;
+                $('.field input').each(function() {
+                    if ($(this).val().length == 0) {
+                        empty = true;
+                    }
+                });
+
+                if (empty) {                                            // // Function disabling addtolist button if input field is empty
+                    $('.actions input').attr('disabled', 'disabled');
+                } else {
+                    $('.actions input').attr('disabled', false);
+                }
+            });
+        });
+
+
+        $("document").ready(function () {
+
+            $("#my_list").on("click", ".do", (function () {         // Click event switching from do to done class when list item clicked on
+                $(this).toggleClass("done");
+            }));
+
+            $("#getrid").click(function() {                         // Click event causing done class to fadeout when remove tasks button clicked
+                $(".done").fadeOut(500);
+
+
+                $('.done').each(function(){                         // For each .done item, remove
+
+                    // Need the text of the todo item,
+                    var text = $(this).text();
+                    // And the date,
+                    var theDate = new Date();
+                    // Append to table
+                    $('#myTable').append("<tr><td>" + text + "</td><td>" + theDate + "</td></tr>");
+
+                });
+
+                $('.done').remove();   // Delete from todo list
+
+            });});})
+
+</script>
+    <p><p>
+
+    <table id="myTable" border=5 cellpadding ="5">
+        <tr>
+            <th style="width:130px" align="left">Item</th>
+            <th style="width:130px" align="left">Date Finished</th></tr>
+        <td><p><span id="answer"></span></p></td>
+</table>
+</div>
+</body>
+</html>

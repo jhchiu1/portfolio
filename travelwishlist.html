@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<div lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Turn</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        .visited {
+            background-color: #19f3f3;
+            text-decoration: line-through;
+        }
+
+        #gradient {
+            height: 750px;
+            background: #000000; /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(left, #000000, #474747); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, #000000, #474747); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, #000000, #474747); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, #000000, #474747); /* Standard syntax (must be last) */
+        }
+        td {
+            color: white;
+            font-family: tahoma;
+            font-weight: bold;
+
+        }
+
+        th {
+            color: white;
+            font-family: tahoma;
+            font-weight: bold;
+        }
+
+
+        table {
+            margin-left: 610px;
+            border: 3px solid white;
+        }
+
+        p {
+            margin-left: 100px;
+            font-size: 38px;
+        }
+        h2 {
+            color: #00ffcc;
+            font-size: 48px;
+            margin-left: center;
+            font-family: Tahoma;
+            letter-spacing: 2px;
+            font-weight: bold;
+            background: -webkit-linear-gradient(left, #f006d4, #f4d27a, #19f3f3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .button {
+            font-family: Tahoma;
+            background-color: #19f3f3;
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 30px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #19f3f3;
+            background-color: #34373a;
+            border:  2px solid #19f3f3;
+            border-radius: 3px;
+            box-shadow: 0 1px black;
+            margin-left: 660px;
+        }
+
+        .button:hover {
+            background-color: #19f3f3;
+            color: #34373a;
+            -webkit-animation: bounce .3s infinite alternate;
+            -moz-animation: bounce .3s infinite alternate;
+            animation: bounce .3s infinite alternate;
+            animation-iteration-count:2;
+        }
+        @-webkit-keyframes bounce {
+            to { -webkit-transform: scale(1.2); }
+        }
+        @-moz-keyframes bounce {
+            to { -moz-transform: scale(1.2); }
+        }
+        @keyframes bounce {
+            to { transform: scale(1.2); }
+        }
+
+        .button:active {
+            background-color: #19f3f3;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        li {
+            font-family: Tahoma;
+            color: white;
+            font-size: 25px;
+            margin-left: 580px;
+        }
+
+        p {
+            font-family: Tahoma;
+            color: white;
+            font-size: 25px;
+            margin-left: 580px;
+        }
+    </style>
+</head>
+<body>
+<div id="gradient">
+
+<h2>Travel Wishlist</h2>
+
+<h3>Click on a place to 'visit' it</h3>
+
+<ul>
+    <li class="place">Rome</li>
+    <li class="place">Cairo</li>
+    <li class="place">New York</li>
+    <li class="place">Tokyo</li>
+    <li class="place">Rio de Janeiro</li>
+</ul>
+</body>
+
+
+<P>You have visited <span id="total_visited">0</span> place(s)</P>
+<P>You have <span id="total_not_visited">0</span> place(s) left to visit</P>
+<button class="button" type="button" id="show_visited">Show visited</button>
+
+<script>
+/*
+ $("#name") selects elements with id="name"
+ $(".thing") selects elements with class="thing"
+ $("p") selects elements with tag = p i.e. <P>paragraph</p>
+
+ */
+    function updatevisited() {                          // Function to update total visited/unvisited count
+
+        // Count the number of <li> elements with class=visited. Selector ".visited"
+       // var visited = $('#total_visited').length;
+        var visited = $('.visited').length;             // Counts # of visited list items
+
+        // Count the number of class=place elements
+        // math to figure out how many unvisited
+
+        var unvisited = $('.place').length - visited;       // Counts # of unvisited places by subracting visted list items from total
+
+        if (unvisited == 0){
+            alert("You've visited all the places!");}       // Alert message appears when unvisited count equals 0
+
+        $("#total_visited").html(visited);                  // Updates total visited counter
+        $("#total_not_visited").html(unvisited);            // Updates total unvisited counter
+    }
+
+    $(function(){
+        // TODO update the numbers in total_visited and total_not_visited spans
+        // TODO select all class=place elements. When they are clicked, add the class "visited"
+        // TODO keep the the numbers in total_visited and total_not_visited spans updated as user selects more places
+        // TODO Display an alert when all destinations have been visited
+        $(".place").click(function() {                      // Click function to toggle visited class
+            $(this).toggleClass("visited");
+            updatevisited();
+        });
+    });
+
+
+
+
+</script>
+</div>
+
+</body>
+
+</html>
