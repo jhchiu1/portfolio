@@ -22,6 +22,53 @@
             height: 400px;
             width: 500px;
         }
+        .button {
+            font-family: Tahoma;
+            background-color: #19f3f3;
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 20px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #19f3f3;
+            background-color: #34373a;
+            border:  2px solid #19f3f3;
+            border-radius: 3px;
+            box-shadow: 0 1px black;
+            margin-left: -500px;
+        }
+
+        a:visited {
+            color: #f4d27a;
+
+        }
+
+        .button:hover {
+            background-color: #19f3f3;
+            color: #34373a;
+            -webkit-animation: bounce .3s infinite alternate;
+            -moz-animation: bounce .3s infinite alternate;
+            animation: bounce .3s infinite alternate;
+            animation-iteration-count:2;
+        }
+        @-webkit-keyframes bounce {
+            to { -webkit-transform: scale(1.2); }
+        }
+        @-moz-keyframes bounce {
+            to { -moz-transform: scale(1.2); }
+        }
+        @keyframes bounce {
+            to { transform: scale(1.2); }
+        }
+
+        .button:active {
+            background-color: #19f3f3;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
     </style>
 
     <script async defer
@@ -29,6 +76,7 @@
     </script>
     <link rel="stylesheet" type="text/css" href="style3.css">
 </head>
+<body>
 <div id="gradient">
 
     <div class="container">
@@ -38,7 +86,6 @@
         </div>
     </div>
 
-    <body>
 
     <h1> <span id='logo'>JC</span></h1><p><p><p><p><p>
 
@@ -58,7 +105,7 @@
 
         </span>
 </div>
-<body>
+
 <div class="contactcontain2"><h2>CONTACT</h2>
 
 
@@ -92,13 +139,10 @@
 
 
 </script>
-</head>
-    <body>
 
 
 
-
-<h3><a href="mailto:jhchiu1@gmail.com">Send me an email!</a></h3>
+<button class="button"><a href="mailto:jhchiu1@gmail.com">Send me an email!</button>
 <!--This div will contain a map. Note that the size of this div is set with CSS.-->
 <div id="map"></div>
 
