@@ -10,7 +10,7 @@
 body {
   background-color: #34373a;
   background-image: url("navibg.png");
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
   background-position: left top;
 }
 
@@ -119,6 +119,27 @@ a:visited {
   margin-left: 490px;
   height: 400px;
   width: 500px;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  background-color: #474747;
+  border-left: 1px solid #474747;
+
+}
+::-webkit-scrollbar-thumb {
+  background-color: #f006d4;
+  background-image: -webkit-gradient(linear,
+  40% 0%,
+  75% 84%,
+  from(#f006d4),
+  to(#f4d27a),
+  color-stop(.6,#19f3f3))
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #f4d27a;
 }
 
 * {box-sizing: border-box}
