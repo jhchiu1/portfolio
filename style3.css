@@ -18,9 +18,9 @@ p {
   font-weight: bold;
 }
 
-h3 {
+h4 {
   color: #00ffcc;
-  font-size: 18px;
+  font-size: 48px;
   text-align: center;
   font-family: Tahoma;
   letter-spacing: 2px;
@@ -30,6 +30,13 @@ h3 {
   -webkit-text-fill-color: transparent;
 }
 
+h3 {
+  color: white;
+  font-family: Tahoma;
+  font-weight: bold;
+  font-size: 12px;
+  margin-left: 200px
+}
 h2 {
   color: #00ffcc;
   font-size: 48px;
@@ -37,6 +44,8 @@ h2 {
   font-family: Tahoma;
   letter-spacing: 2px;
   font-weight: bold;
+  margin-top: 200px;
+  margin-right: 150px;
   background: -webkit-linear-gradient(left, #f006d4, #f4d27a, #19f3f3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -79,7 +88,7 @@ img {
   border:  2px solid #19f3f3;
   border-radius: 3px;
   box-shadow: 0 1px black;
-  margin-left: 580px;
+  margin-left: 440px;
 }
 a:visited {
   color: #f006d4;
@@ -104,10 +113,15 @@ a:visited {
 }
 }
 
+
 .button:active {
   background-color: #19f3f3;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+#butz {
+  margin-left: -200px;
 }
 .navi {
   margin: 15px;
@@ -142,9 +156,24 @@ a:visited {
   background-color: #f4d27a;
 }
 
-* {box-sizing: border-box}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
-.container {
+
+
+.content {
+  padding: 1000px;
+}
+.col-sm-3 {
+  width: 10%;
+}
+.col-lg-5 {
+  width: 90%;
+}
+
+.container1 {
   width: 100%;
   background-color: black;
   border-radius: 3px;
