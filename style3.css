@@ -123,6 +123,10 @@ a:visited {
 
 * {box-sizing: border-box}
 
+.content {
+  padding: 50px;
+}
+
 .container {
   width: 100%;
   background-color: black;
