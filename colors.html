@@ -2,114 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Colors</title>
-    <style>
-        #randomColor {
-                     height : 70px;
-                     width : 225px;
-                     font-size: 18px;
-                 }
+    <title>Julie Chiu</title>
+    <!-- The viewport is the visible area of a page. Pages may be wider
+ than the screen or browser window; and pages are often longer than
+ the browser window. This tag sets the width of the page equal to the
+ width of the browser window. The height stays the same. -->
+    <meta name="viewport" content="width=device-width initial-scale=1">
 
-        #addColor {
-            height: 70px;
-            width: 275px;
-            font-size: 18px;
-        }
+    <!-- Include Bootstrap. This downloads Bootstrap from a CDN. You can
+     also host Bootstrap on your own server, but it's usually faster for the
+     user for their browser to fetch it from a CDN. -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        #gradient {
-            height: 750px;
-            background: #000000; /* For browsers that do not support gradients */
-            background: -webkit-linear-gradient(left, #000000, #474747); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(right, #000000, #474747); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(right, #000000, #474747); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to right, #000000, #474747); /* Standard syntax (must be last) */
-        }
-        td {
-            color: white;
-            font-family: tahoma;
-            font-weight: bold;
-
-        }
-
-        th {
-            color: white;
-            font-family: tahoma;
-            font-weight: bold;
-        }
-
-        #samplecolor {
-            font-family: tahoma;
-            font-weight: bold;
-        }
-
-        table {
-            margin-left: 225px;
-            border: 3px solid white;
-        }
-
-        p {
-            margin-left: 100px;
-            font-size: 38px;
-        }
-
-        .button {
-            font-family: Tahoma;
-            background-color: #19f3f3;
-            display: inline-block;
-            padding: 5px 10px;
-            font-size: 12px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            outline: none;
-            color: #19f3f3;
-            background-color: #34373a;
-            border:  2px solid #19f3f3;
-            border-radius: 3px;
-            box-shadow: 0 1px black;
-            margin-left: 100px;
-        }
-
-        a:visited {
-            color: #f4d27a;
-
-        }
-
-        .button:hover {
-            background-color: #19f3f3;
-            color: #34373a;
-            -webkit-animation: bounce .3s infinite alternate;
-            -moz-animation: bounce .3s infinite alternate;
-            animation: bounce .3s infinite alternate;
-            animation-iteration-count:2;
-        }
-        @-webkit-keyframes bounce {
-            to { -webkit-transform: scale(1.2); }
-        }
-        @-moz-keyframes bounce {
-            to { -moz-transform: scale(1.2); }
-        }
-        @keyframes bounce {
-            to { transform: scale(1.2); }
-        }
-        }
-
-        .button:active {
-            background-color: #19f3f3;
-            box-shadow: 0 5px #666;
-            transform: translateY(4px);
-        }
-    </style>
-
-
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" type="text/css" href="style3.css">
 </head>
 <body>
-<div id="gradient">
 
-<!--Can provide arguments to JavaScript functions when called from code
-The argument "this" sends this element as an argument - in this case, the
-button elements sends itself as an argument. -->
+<div class="row">
+    <div id="gradient">
+        <div class="col-sm-3" id="navigation">
+            <div w3-include-html="navigation.html"></div>
+        </div>
 
+        <div class="col-lg-5" id="content">
 <p id="samplecolor"><b>CHANGE THE COLOR OF THIS PARAGRAPH<br>
     BY CLICKING ON RANDOM COLOR BUTTON.<br>
     SAVE COLOR TO TABLE BELOW<br>
@@ -117,8 +35,8 @@ button elements sends itself as an argument. -->
 
 
 
-<button class="button" id='randomColor'>Click for Random Color</button>
-<button class="button" id='addColor'>Save Random Color to Table</button>
+<button class="button4" id='randomColor'>Click for Random Color</button>
+<button class="button4" id='addColor'>Save Random Color to Table</button>
 
 <script>
     changeToRandomColor();
@@ -182,5 +100,13 @@ button elements sends itself as an argument. -->
 
 </table>
 
+
+    </div>
 </div>
+
+    <script>
+        w3.includeHTML();
+    </script>
 </body>
+</div>
+</html>

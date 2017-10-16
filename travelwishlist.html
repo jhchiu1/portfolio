@@ -1,126 +1,37 @@
 <!DOCTYPE html>
-<div lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Your Turn</title>
+    <title>Julie Chiu</title>
+    <!-- The viewport is the visible area of a page. Pages may be wider
+ than the screen or browser window; and pages are often longer than
+ the browser window. This tag sets the width of the page equal to the
+ width of the browser window. The height stays the same. -->
+    <meta name="viewport" content="width=device-width initial-scale=1">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Include Bootstrap. This downloads Bootstrap from a CDN. You can
+     also host Bootstrap on your own server, but it's usually faster for the
+     user for their browser to fetch it from a CDN. -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <style>
-        .visited {
-            background-color: #19f3f3;
-            text-decoration: line-through;
-        }
-
-        #gradient {
-            height: 750px;
-            background: #000000; /* For browsers that do not support gradients */
-            background: -webkit-linear-gradient(left, #000000, #474747); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(right, #000000, #474747); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(right, #000000, #474747); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to right, #000000, #474747); /* Standard syntax (must be last) */
-        }
-        td {
-            color: white;
-            font-family: tahoma;
-            font-weight: bold;
-
-        }
-
-        th {
-            color: white;
-            font-family: tahoma;
-            font-weight: bold;
-        }
-
-
-        table {
-            margin-left: 610px;
-            border: 3px solid white;
-        }
-
-        p {
-            margin-left: 100px;
-            font-size: 38px;
-        }
-        h2 {
-            color: #00ffcc;
-            font-size: 48px;
-            text-align: center;
-            font-family: Tahoma;
-            letter-spacing: 2px;
-            font-weight: bold;
-            background: -webkit-linear-gradient(left, #f006d4, #f4d27a, #19f3f3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .button {
-            font-family: Tahoma;
-            background-color: #19f3f3;
-            display: inline-block;
-            padding: 5px 10px;
-            font-size: 30px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            outline: none;
-            color: #19f3f3;
-            background-color: #34373a;
-            border:  2px solid #19f3f3;
-            border-radius: 3px;
-            box-shadow: 0 1px black;
-            margin-left: 660px;
-        }
-
-        a:visited {
-            color: #f4d27a;
-
-        }
-        .button:hover {
-            background-color: #19f3f3;
-            color: #34373a;
-            -webkit-animation: bounce .3s infinite alternate;
-            -moz-animation: bounce .3s infinite alternate;
-            animation: bounce .3s infinite alternate;
-            animation-iteration-count:2;
-        }
-        @-webkit-keyframes bounce {
-            to { -webkit-transform: scale(1.2); }
-        }
-        @-moz-keyframes bounce {
-            to { -moz-transform: scale(1.2); }
-        }
-        @keyframes bounce {
-            to { transform: scale(1.2); }
-        }
-
-        .button:active {
-            background-color: #19f3f3;
-            box-shadow: 0 5px #666;
-            transform: translateY(4px);
-        }
-
-        li {
-            font-family: Tahoma;
-            color: white;
-            font-size: 25px;
-            margin-left: 580px;
-        }
-
-        p {
-            font-family: Tahoma;
-            color: white;
-            font-size: 25px;
-            margin-left: 580px;
-        }
-    </style>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" type="text/css" href="style3.css">
 </head>
 <body>
-<div id="gradient">
+
+<div class="row">
+    <div id="gradient">
+        <div class="col-sm-3" id="navigation">
+            <div w3-include-html="navigation.html"></div>
+        </div>
+
+        <div class="col-lg-5" id="content">
 
 <h2>Travel Wishlist</h2>
 
-<h3>Click on a place to 'visit' it</h3>
+<h3 style="text-align: center">Click on a place to 'visit' it</h3>
 
 <ul>
     <li class="place">Rome</li>
@@ -129,7 +40,7 @@
     <li class="place">Tokyo</li>
     <li class="place">Rio de Janeiro</li>
 </ul>
-</body>
+
 
 
 <P>You have visited <span id="total_visited">0</span> place(s)</P>
@@ -177,7 +88,12 @@
 
 </script>
 </div>
+</div>
+</div>
 
+<script>
+    w3.includeHTML();
+</script>
 </body>
-
+</div>
 </html>

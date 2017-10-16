@@ -31,10 +31,14 @@ h4 {
 }
 
 h3 {
-  color: white;
+  color: #00ffcc;
+  font-size: 24px;
+  text-align: center;
   font-family: Tahoma;
   font-weight: bold;
-  font-size: 12px;
+  background: -webkit-linear-gradient(left, #f006d4, #f4d27a, #19f3f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-left: 200px
 }
 h2 {
@@ -61,6 +65,10 @@ h1 {
 img {
   float: right;
   margin-right: 300px;
+  color: #00ffcc;
+  border: #f006d4;
+  border-radius: 3px;
+  box-shadow: 0 1px black;
 }
 
 #logo {
@@ -69,13 +77,16 @@ img {
   text-shadow: 2px 2px 4px #19f3f3;
   padding: 15px;
   padding-bottom: 50px;
-  text-align: left;
   margin-bottom: 70px;
+  text-decoration: none;
+}
+
+.under {
+  text-decoration: none;
 }
 
 .button {
   font-family: Tahoma;
-  background-color: #19f3f3;
   display: inline-block;
   padding: 5px 15px;
   font-size: 12px;
@@ -90,11 +101,98 @@ img {
   box-shadow: 0 1px black;
   margin-left: 440px;
 }
+
+
+.button1 {
+  font-family: Tahoma;
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #19f3f3;
+  background-color: #34373a;
+  border:  2px solid #19f3f3;
+  border-radius: 3px;
+  box-shadow: 0 1px black;
+  margin-left: 325px;
+}
+
+.button2 {
+  font-family: Tahoma;
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #19f3f3;
+  background-color: #34373a;
+  border:  2px solid #19f3f3;
+  border-radius: 3px;
+  box-shadow: 0 1px black;
+  margin-left: 125px;
+}
+
+.button3 {
+  font-family: Tahoma;
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #19f3f3;
+  background-color: #34373a;
+  border:  2px solid #19f3f3;
+  border-radius: 3px;
+  box-shadow: 0 1px black;
+  margin-left: 525px;
+}
+
+.button4 {
+  font-family: Tahoma;
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #19f3f3;
+  background-color: #34373a;
+  border:  2px solid #19f3f3;
+  border-radius: 3px;
+  box-shadow: 0 1px black;
+  margin-left: 105px;
+}
+
+.button5 {
+  font-family: Tahoma;
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #19f3f3;
+  background-color: #34373a;
+  border:  2px solid #19f3f3;
+  border-radius: 3px;
+  box-shadow: 0 1px black;
+  margin-left: 520px;
+}
 a:visited {
   color: #f006d4;
   text-decoration: none;
+  border: 0 none;
 }
-.button:hover {
+.button:hover, .button1:hover, .button2:hover, .button3:hover, .button4:hover, .button5:hover{
   background-color: #19f3f3;
   color: #34373a;
   -webkit-animation: bounce .3s infinite alternate;
@@ -111,18 +209,14 @@ a:visited {
 @keyframes bounce {
   to { transform: scale(1.2); }
 }
-}
 
 
-.button:active {
+.button:active, .button1:active, .button2:active, .button3:active, .button4:active, .button5:active{
   background-color: #19f3f3;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
-#butz {
-  margin-left: -200px;
-}
 .navi {
   margin: 15px;
   margin-left: 25px;
@@ -164,6 +258,10 @@ html, body {
 
 
 .content {
+  padding: 500px;
+}
+
+.content2 {
   padding: 1000px;
 }
 .col-sm-3 {
@@ -171,6 +269,14 @@ html, body {
 }
 .col-lg-5 {
   width: 90%;
+}
+
+.col-md-5 {
+    width: 40%;
+  }
+
+.col-md-10 {
+  width: 40%;
 }
 
 .container1 {
@@ -206,6 +312,91 @@ html, body {
   height: auto;
 }
 
+#randomColor {
+  height : 70px;
+  width : 225px;
+  font-size: 18px;
+}
+
+#addColor {
+  height: 70px;
+  width: 275px;
+  font-size: 18px;
+}
+
+#gradient {
+  height: 750px;
+  background: #000000; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #000000, #474747); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #000000, #474747); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #000000, #474747); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #000000, #474747); /* Standard syntax (must be last) */
+}
+td {
+  color: white;
+  font-family: tahoma;
+  font-weight: bold;
+
+}
+
+th {
+  color: white;
+  font-family: tahoma;
+  font-weight: bold;
+}
+
+#samplecolor {
+  font-family: tahoma;
+  font-weight: bold;
+}
+
+table {
+  margin-left: 485px;
+  border: 3px solid white;
+}
+
+p {
+  margin-left: 100px;
+  font-size: 38px;
+}
+
+.do{
+  background-color: #19f3f3;
+  font-family: Tahoma;
+}
+.done{
+  background-color: #f006d4;
+  text-decoration: line-through;
+  font-family: Tahoma;
+}
+
+p {
+  margin-left: 100px;
+  font-size: 38px;
+}
+
+.field {
+  border-radius: 3px;
+  margin-left: 520px;
+}
+
+.visited {
+  background-color: #19f3f3;
+  text-decoration: line-through;
+}
+
+li {
+  font-family: Tahoma;
+  color: white;
+  font-size: 25px;
+  margin-left: 580px;
+}
+
+
+
+
+
+
 .overlay {
   position: absolute;
   top: 0;
@@ -221,7 +412,7 @@ html, body {
 
 .container :hover .overlay {
   opacity: 1;
-
+}
 .text {
   color: white;
   font-size: 20px;
