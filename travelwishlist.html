@@ -18,6 +18,12 @@
 
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <link rel="stylesheet" type="text/css" href="style3.css">
+    <style>
+        table {
+            margin-left: 480px;
+            border: 3px solid white;
+        }
+    </style>
 </head>
 <body>
 
@@ -31,21 +37,22 @@
 
 <h2>Travel Wishlist</h2>
 
-<h3 style="text-align: center">Click on a place to 'visit' it</h3>
+<h3 style="text-align: center; margin-left: -150px;">Click on a place to 'visit' it</h3>
 
-<ul>
+<div class="placelist">
+<ul id="my_list">
     <li class="place">Rome</li>
     <li class="place">Cairo</li>
     <li class="place">New York</li>
     <li class="place">Tokyo</li>
     <li class="place">Rio de Janeiro</li>
-</ul>
+</ul></div>
 
 
-
-<P>You have visited <span id="total_visited">0</span> place(s)</P>
-<P>You have <span id="total_not_visited">0</span> place(s) left to visit</P>
-<button class="button" type="button" id="show_visited">Show visited</button>
+<span id="stats">
+<h3 style="text-align: center; margin-left: -150px;">You have visited <span id="total_visited">0</span> place(s)</>
+    <h3 style="text-align: center; margin-left: -150px;">You have <span id="total_not_visited">0</span> place(s) left to visit</h3></span>
+<button class="button6" type="button" id="show_visited">SHOW VISITED</button>
 
 <script>
 /*
@@ -54,6 +61,8 @@
  $("p") selects elements with tag = p i.e. <P>paragraph</p>
 
  */
+
+
     function updatevisited() {                          // Function to update total visited/unvisited count
 
         // Count the number of <li> elements with class=visited. Selector ".visited"
@@ -81,14 +90,49 @@
             $(this).toggleClass("visited");
             updatevisited();
         });
-    });
+
+        $(function() {
+
+            $("#show_visited").click(function () {                             // Click function appending user input to list with class = do
+                y = $("#input2").val();
+                $("#my_list").append("<li class='do'>"+y+"</li>");
+            });
+            $("document").ready(function () {
+
+                $("#my_list").on("click", ".visited", (function () {         // Click event switching from do to done class when list item clicked on
+                    $(this).toggleClass("unvisited");
+                }));
+
+                $("#show_visited").click(function() {                         // Click event causing done class to fadeout when remove tasks button clicked
+                    $(".visited").fadeOut(500);
 
 
+                    $(".visited").each(function(){
 
+                        // Need the text of the todo item,
+                        var text = $(this).text();
+                        // And the date,
+                        var theDate = new Date();
+                        // Append to table
+                        $('#myTable').append("<tr><td>" + text + "</td><td>" + theDate + "</td></tr>");
+
+                    });
+
+                    $('.visted').remove();   // Delete from todo list
+
+                });});})})
 
 </script>
-</div>
-</div>
+            <p><p>
+
+            <table id="myTable" border=5 cellpadding ="5">
+                <tr>
+                    <th style="width:130px" align="left">Item</th>
+                    <th style="width:130px" align="left">Date Finished</th></tr>
+                <td><p><span id="answer"></span></p></td>
+            </table>
+        </div>
+    </div>
 </div>
 
 <script>

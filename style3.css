@@ -90,7 +90,7 @@ img {
   display: inline-block;
   padding: 5px 15px;
   font-size: 12px;
-  cursor: pointer;
+  cursor: crosshair;
   text-align: center;
   text-decoration: none;
   outline: none;
@@ -108,7 +108,7 @@ img {
   display: inline-block;
   padding: 5px 15px;
   font-size: 12px;
-  cursor: pointer;
+  cursor: crosshair;
   text-align: center;
   text-decoration: none;
   outline: none;
@@ -125,7 +125,7 @@ img {
   display: inline-block;
   padding: 5px 15px;
   font-size: 12px;
-  cursor: pointer;
+  cursor: crosshair;
   text-align: center;
   text-decoration: none;
   outline: none;
@@ -142,7 +142,7 @@ img {
   display: inline-block;
   padding: 5px 15px;
   font-size: 12px;
-  cursor: pointer;
+  cursor: crosshair;
   text-align: center;
   text-decoration: none;
   outline: none;
@@ -151,7 +151,7 @@ img {
   border:  2px solid #19f3f3;
   border-radius: 3px;
   box-shadow: 0 1px black;
-  margin-left: 525px;
+  margin-left: 545px;
 }
 
 .button4 {
@@ -159,7 +159,7 @@ img {
   display: inline-block;
   padding: 5px 15px;
   font-size: 12px;
-  cursor: pointer;
+  cursor: crosshair;
   text-align: center;
   text-decoration: none;
   outline: none;
@@ -172,11 +172,28 @@ img {
 }
 
 .button5 {
+   font-family: Tahoma;
+   display: inline-block;
+   padding: 5px 15px;
+   font-size: 12px;
+   cursor: crosshair;
+   text-align: center;
+   text-decoration: none;
+   outline: none;
+   color: #19f3f3;
+   background-color: #34373a;
+   border:  2px solid #19f3f3;
+   border-radius: 3px;
+   box-shadow: 0 1px black;
+   margin-left: 520px;
+ }
+
+.button6 {
   font-family: Tahoma;
   display: inline-block;
   padding: 5px 15px;
   font-size: 12px;
-  cursor: pointer;
+  cursor: crosshair;
   text-align: center;
   text-decoration: none;
   outline: none;
@@ -185,14 +202,14 @@ img {
   border:  2px solid #19f3f3;
   border-radius: 3px;
   box-shadow: 0 1px black;
-  margin-left: 520px;
+  margin-left: 560px;
 }
 a:visited {
   color: #f006d4;
   text-decoration: none;
   border: 0 none;
 }
-.button:hover, .button1:hover, .button2:hover, .button3:hover, .button4:hover, .button5:hover{
+.button:hover, .button1:hover, .button2:hover, .button3:hover, .button4:hover, .button5:hover, .button6:hover{
   background-color: #19f3f3;
   color: #34373a;
   -webkit-animation: bounce .3s infinite alternate;
@@ -211,7 +228,7 @@ a:visited {
 }
 
 
-.button:active, .button1:active, .button2:active, .button3:active, .button4:active, .button5:active{
+.button:active, .button1:active, .button2:active, .button3:active, .button4:active, .button5:active, .button6:active{
   background-color: #19f3f3;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
@@ -224,7 +241,7 @@ a:visited {
 }
 
 #map {
-  margin-left: 490px;
+  margin-left: 530px;
   height: 400px;
   width: 500px;
 }
@@ -264,6 +281,7 @@ html, body {
 .content2 {
   padding: 1000px;
 }
+
 .col-sm-3 {
   width: 10%;
 }
@@ -351,7 +369,7 @@ th {
 }
 
 table {
-  margin-left: 485px;
+  margin-left: 250px;
   border: 3px solid white;
 }
 p {
@@ -391,10 +409,17 @@ li {
   margin-left: 580px;
 }
 
+#stats {
+  margin-left: 380px;
+}
 
+#place {
+  margin-left: 380px;
+}
 
-
-
+.placelist {
+  margin-left: -60px;
+}
 
 .overlay {
   position: absolute;
